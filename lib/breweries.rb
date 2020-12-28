@@ -1,3 +1,5 @@
+require "pry"
+
 class Breweries
 
     attr_accessor :id, :name, :brewery_type, :city, :state, :phone, :website_url
@@ -9,6 +11,7 @@ class Breweries
     end 
 
     def self.all
+        binding.pry
         @@all
     end
 end 

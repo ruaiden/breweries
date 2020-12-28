@@ -1,6 +1,7 @@
-# gem 'pry'
-# gem 'httparty'
-# gem 'net/http'
-# gem 'require_relative'
-# gem 'json'
-# gem 'rspec'
+source "https://rubygems.org"
+
+gem 'pry'
+gem 'httparty'
+gem 'require_relative'
+gem 'json'
+gem 'rspec'
