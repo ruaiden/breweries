@@ -1,0 +1,6 @@
+# gem 'pry'
+# gem 'httparty'
+# gem 'net/http'
+# gem 'require_relative'
+# gem 'json'
+# gem 'rspec'
