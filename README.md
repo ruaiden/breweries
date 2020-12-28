@@ -1,1 +1,3 @@
-#Brewerie Search 
+#Breweries Search 
+
+An App about Breweries
