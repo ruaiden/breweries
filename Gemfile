@@ -5,3 +5,5 @@ gem 'httparty'
 gem 'require_relative'
 gem 'json'
 gem 'rspec'
+gem 'net-http'
+

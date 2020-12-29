@@ -1,4 +1,3 @@
-require "pry"
 
 class Breweries
 
@@ -11,7 +10,6 @@ class Breweries
     end 
 
     def self.all
-        binding.pry
         @@all
     end
 end 
