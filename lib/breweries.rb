@@ -7,6 +7,7 @@ class Breweries
 
     def initialize
         @@all << self
+        
     end 
 
     def self.all

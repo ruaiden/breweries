@@ -3,26 +3,35 @@ class API
     def self.get_brewery
         url = "https://api.openbrewerydb.org/breweries"
         uri = URI(url)
-        response = NET::HTML.get(uri)
+        response = Net::HTTP.get(uri) 
         hash = JSON.parse(response)
+      
+    
+        #above code takes the api url
+        #runs URI on the url 
+        #We then run Net::HTTP and get to get all the information in our API
+        #Then we parse our JSON so that the information are in hashes which are easier to look at.
+
+        #--------------------------#
+
+        #--------------------------#
+
         
-        array_of_data = hash[]
+        
+        #Keys we want to take information from in our API:
+        #name
+        #brewery_type
+        #city
+        #state
+        #phone
+        #website_url
+        #updated_at
 
-
-        array_of_data.each do |beer_hash| 
-            beer = Breweries.new
-            beer.id = beer_hash["id"]
-            beer.name = beer_hash["name"]
-            beer.brewery_type = beer_hash["brewery_type"]
-            beer.city = beer_hash["city"]
-            beer.state = beer_hash["state"]
-            beer.phone = beer_hash["phone"]
-            beer.website_url = beer_hash["website_url"]
-        end 
-
+        beer = Breweries.new
+        
     end
 
 
     
 
-end 
+end  
