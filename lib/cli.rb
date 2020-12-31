@@ -26,6 +26,7 @@ class CLI
             end 
 
             display_breweries
+            user_choice
         
            
         end
@@ -37,6 +38,19 @@ class CLI
             #I want these to be the name of the brewery not just the object id. 
         
            end
+        end 
+
+        def user_choice
+            puts "Enter number of brewery you want to know more?"
+
+            index = gets.strip.to_i - 1
+
+            #index has to be valid number between 1 and 20
+
+            until index.between?(0, Breweries.all.length - 1)
+                #if user does not input this, keep asking for user input
+                index = gets.strip.to_i - 1
+            end
         end 
 
 end 
