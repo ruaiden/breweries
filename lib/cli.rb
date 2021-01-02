@@ -6,8 +6,6 @@ class CLI
             self.menu
         end 
 
-         
-
         def menu
             #menu gives options to the user to move forward or exit
             puts "Do you want to see Breweries?"
@@ -28,7 +26,7 @@ class CLI
         def display_breweries
            #display all the object that are in the @@all variable
            Breweries.all.each.with_index(1) do |beer,i|
-                puts "#{i}. #{beer}."
+                puts "#{i}. #{beer.name}."
             #I want these to be the name of the brewery not just the object id. 
         
            end
@@ -48,14 +46,13 @@ class CLI
            
             brewery_instance = Breweries.all[index]
             display_brewery_details(brewery_instance)
-
             
         end 
 
         def display_brewery_details(drink_instance)
             sleep(1)
             puts "\n"
-            puts drink_instance
+            puts drink_instance.name
         end 
 
 end 
