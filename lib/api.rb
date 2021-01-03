@@ -4,7 +4,6 @@ class API
         url = "https://api.openbrewerydb.org/breweries"
         uri = URI(url)
         response = Net::HTTP.get(uri) 
-        binding.pry
         hash = JSON.parse(response)
       
         #above code takes the api url
@@ -23,10 +22,20 @@ class API
         #state
         #phone
         #website_url
-        #updated_at
+        
+    
         hash.each do |brewery_hash|
-            beer = Breweries.new
-            beer.name = brewery_hash["name"]
+            brewery = Breweries.new
+            brewery.name = brewery_hash["name"]
+            brewery.brewery_type = brewery_hash["brewery_type"]
+            brewery.city = brewery_hash["city"]
+            brewery.state = brewery_hash["state"]
+            brewery.phone = brewery_hash["phone"]
+            brewery.website_url = brewery_hash["website_url"]
+        
+            #Keys that do not work street, country, longitude, latitude, updated_at
+            #and created_at
+
         end 
     end
 
