@@ -53,6 +53,20 @@ class CLI
             sleep(1)
             puts "\n"
             puts drink_instance.name
-        end 
-
+            puts "\n"
+            sleep(1)
+            
+            puts "Type of Brewery: #{drink_instance.brewery_type.capitalize}"
+            sleep(1)
+            puts "City: #{drink_instance.city.capitalize}"
+            sleep(1)
+            puts "State: #{drink_instance.state.capitalize}"
+            sleep(1)
+            puts "Phone Number: #{drink_instance.phone}"
+            sleep(1)
+            puts "Website: #{drink_instance.website_url}"
+            sleep(1)
+            puts "\n"
+            
+        end
 end 
