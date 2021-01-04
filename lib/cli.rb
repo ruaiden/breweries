@@ -2,34 +2,50 @@ class CLI
 
         def start 
            puts "Welcome User."
-            API.get_brewery
-            self.menu
+           API.get_brewery
+           API.brewpub
+           self.menu
+            
         end 
 
         def menu
             #menu gives options to the user to move forward or exit
-            puts "Do you want to see Breweries?"
-            puts "Enter 'yes' to see Breweries."
-            puts "Enter 'no' to see Breweries."
+            puts "Do you want to see all Breweries?"
+            puts "Enter 'yes' to see all Breweries."
+            puts "Enter 'brewpub' to see beer-focused restaurant/bar with a brewery on-premise"
+            puts "Enter 'no' to see Exit."
             sleep(2)
             puts "\n"
             user_input = gets.strip.downcase
             
             if user_input == "yes" || user_input == "y" 
                 puts "Good Choice!"
-            end 
+                display_breweries
+                user_choice
 
-            display_breweries
-            user_choice
+            elsif user_input == "micro" || user_input == "Micro"
+                display_micro_breweries
+                # type_of_breweries_display 
+                
+            end            
         end
         
         def display_breweries
            #display all the object that are in the @@all variable
            Breweries.all.each.with_index(1) do |beer,i|
                 puts "#{i}. #{beer.name}."
-            #I want these to be the name of the brewery not just the object id. 
+           
         
            end
+        end 
+
+        def display_micro_breweries
+            #display all the object that are in the @@all variable
+            Type.all.each.with_index(1) do |brewery,i|
+                 puts "#{i}. #{brewery.name}."
+             
+         
+            end
         end 
 
         def user_choice
@@ -69,4 +85,25 @@ class CLI
             puts "\n"
             
         end
-end 
+
+        def user_input_type
+            puts "Enter number of brewery you want to know more?"
+            index2 = gets.strip.to_i - 1
+
+            brewery_type_instance = Type.all[index2]
+            type_of_breweries_display(brewery_type_instance)
+        
+        end
+
+        def type_of_breweries_display(brewery_type_instance)
+
+           puts brewery_type_instance.name
+            puts "\n"
+            sleep(1)
+            binding.pry
+            puts "Type of Brewery: #{drink_instance.brewery_type.capitalize}"
+            sleep(1)
+             
+        end 
+       
+end  

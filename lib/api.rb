@@ -32,14 +32,27 @@ class API
             brewery.state = brewery_hash["state"]
             brewery.phone = brewery_hash["phone"]
             brewery.website_url = brewery_hash["website_url"]
+            brewery.updated_at = brewery_hash["updated_at"]
         
             #Keys that do not work street, country, longitude, latitude, updated_at
             #and created_at
 
         end 
-    end
+    end 
 
-
-    
-
-end  
+        def self.brewpub
+            new_url = "https://api.openbrewerydb.org/breweries?by_type=brewpub"
+            uri = URI(new_url)
+            response = Net::HTTP.get(uri) 
+            search_hash = JSON.parse(response)
+            
+            search_hash.each do |brewery_type|
+                micro = Type.new
+                micro.name = brewery_type["name"]
+                micro.brewery_type = brewery_type["brewery_type"]
+                micro.city = brewery_type["city"]
+                micro.state = brewery_type["state"]
+            end 
+        end 
+     
+end
