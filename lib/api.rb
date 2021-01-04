@@ -52,6 +52,7 @@ class API
                 micro.brewery_type = brewery_type["brewery_type"]
                 micro.city = brewery_type["city"]
                 micro.state = brewery_type["state"]
+                micro.updated_at = brewery_type["updated_at"]
             end 
         end 
      

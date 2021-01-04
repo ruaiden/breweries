@@ -23,8 +23,9 @@ class CLI
                 display_breweries
                 user_choice
 
-            elsif user_input == "micro" || user_input == "Micro"
+            elsif user_input == "brewpub" || user_input == "Brewpub"
                 display_micro_breweries
+                user_input_type
                 # type_of_breweries_display 
                 
             end            
@@ -82,6 +83,7 @@ class CLI
             sleep(1)
             puts "Website: #{drink_instance.website_url}"
             sleep(1)
+            puts "Updated: #{drink_instance.updated_at}"
             puts "\n"
             
         end
@@ -89,6 +91,11 @@ class CLI
         def user_input_type
             puts "Enter number of brewery you want to know more?"
             index2 = gets.strip.to_i - 1
+
+            until index2.between?(0,Type.all.length-1)
+                puts "Sorry Invalid. Choose a Valid Number."
+                index2 = gets.strip.to_i - 1
+            end 
 
             brewery_type_instance = Type.all[index2]
             type_of_breweries_display(brewery_type_instance)
@@ -100,9 +107,17 @@ class CLI
            puts brewery_type_instance.name
             puts "\n"
             sleep(1)
-            binding.pry
-            puts "Type of Brewery: #{drink_instance.brewery_type.capitalize}"
+            puts "Type of Brewery: #{brewery_type_instance.brewery_type.capitalize}"
             sleep(1)
+            puts "City: #{brewery_type_instance.city.capitalize}"
+            sleep(1)
+            puts "State: #{brewery_type_instance.state.capitalize}"
+            sleep(1)
+            puts "Phone Number: #{brewery_type_instance.phone}"
+            sleep(1)
+            puts "Website: #{brewery_type_instance.website_url}"
+            sleep(1)
+            puts "Updated: #{brewery_type_instance.updated_at}"
              
         end 
        
