@@ -22,10 +22,12 @@ class CLI
                 puts "Good Choice!"
                 display_breweries
                 user_choice
+                menu
 
             elsif user_input == "brewpub" || user_input == "Brewpub"
                 display_micro_breweries
                 user_input_type
+                menu
                 # type_of_breweries_display 
                 
             end            
@@ -97,6 +99,8 @@ class CLI
                 index2 = gets.strip.to_i - 1
             end 
 
+
+            
             brewery_type_instance = Type.all[index2]
             type_of_breweries_display(brewery_type_instance)
         
