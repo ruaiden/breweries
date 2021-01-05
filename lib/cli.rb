@@ -28,7 +28,6 @@ class CLI
                 display_micro_breweries
                 user_input_type
                 menu
-                # type_of_breweries_display 
                 
             end            
         end
@@ -85,7 +84,6 @@ class CLI
             sleep(1)
             puts "Website: #{drink_instance.website_url}"
             sleep(1)
-            puts "Updated: #{drink_instance.updated_at}"
             puts "\n"
             
         end
@@ -118,10 +116,12 @@ class CLI
             puts "State: #{brewery_type_instance.state.capitalize}"
             sleep(1)
             puts "Phone Number: #{brewery_type_instance.phone}"
+            #information is not being pulled
             sleep(1)
             puts "Website: #{brewery_type_instance.website_url}"
+               #information is not being pulled
             sleep(1)
-            puts "Updated: #{brewery_type_instance.updated_at}"
+            puts"\n"
              
         end 
        

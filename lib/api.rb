@@ -1,7 +1,7 @@
 class API
 
     def self.get_brewery
-        url = "https://api.openbrewerydb.org/breweries"
+        url = "https://api.openbrewerydb.org/breweries?per_page=50"
         uri = URI(url)
         response = Net::HTTP.get(uri) 
         hash = JSON.parse(response)
@@ -41,7 +41,7 @@ class API
     end 
 
         def self.brewpub
-            new_url = "https://api.openbrewerydb.org/breweries?by_type=brewpub"
+            new_url = "https://api.openbrewerydb.org/breweries?by_type=brewpub&per_page=50"
             uri = URI(new_url)
             response = Net::HTTP.get(uri) 
             search_hash = JSON.parse(response)
