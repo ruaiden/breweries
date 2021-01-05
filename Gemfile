@@ -6,3 +6,5 @@ gem 'require_relative', '~> 1.0', '>= 1.0.3'
 gem 'net-http', '~> 0.1.1'
 gem 'json', '~> 2.5', '>= 2.5.1'
 gem 'rspec', '~> 3.10'
+
+# trying to add tty_prompt
