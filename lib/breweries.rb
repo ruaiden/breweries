@@ -1,7 +1,7 @@
 
 class Breweries
 
-    attr_accessor :id, :name, :brewery_type, :city, :state, :phone, :website_url, :updated_at
+    attr_accessor :id, :name, :brewery_type, :city, :state, :phone, :website_url
 
     @@all =[]
 
@@ -17,7 +17,7 @@ end
 
 class Type
     
-    attr_accessor :id, :name, :brewery_type, :city, :state, :phone, :website_url, :updated_at
+    attr_accessor :id, :name, :brewery_type, :city, :state, :phone, :website_url
 
     @@all =[]
 

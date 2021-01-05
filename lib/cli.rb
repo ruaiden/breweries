@@ -36,7 +36,7 @@ class CLI
            #display all the object that are in the @@all variable
            Breweries.all.each.with_index(1) do |beer,i|
                 puts "#{i}. #{beer.name}."
-           
+           puts "\n"
         
            end
         end 
@@ -45,7 +45,7 @@ class CLI
             #display all the object that are in the @@all variable
             Type.all.each.with_index(1) do |brewery,i|
                  puts "#{i}. #{brewery.name}."
-             
+             puts "\n"
          
             end
         end 
@@ -105,7 +105,7 @@ class CLI
         end
 
         def type_of_breweries_display(brewery_type_instance)
-
+            puts "\n"
            puts brewery_type_instance.name
             puts "\n"
             sleep(1)
