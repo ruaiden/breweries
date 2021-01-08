@@ -6,6 +6,6 @@ gem 'require_relative', '~> 1.0', '>= 1.0.3'
 gem 'net-http', '~> 0.1.1'
 gem 'json', '~> 2.5', '>= 2.5.1'
 gem 'rspec', '~> 3.10'
+gem 'cli-ui', '~> 1.4'
+gem 'cle', '~> 0.0.1'
 
-# trying to add tty_prompt
-#Created a new Branch to test this new gem

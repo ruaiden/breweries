@@ -1,12 +1,14 @@
 class CLI 
 
-        def start 
-           puts "Welcome User."
-           API.get_brewery
-           API.brewpub
-           self.menu
-            
-        end 
+    # extend Memorable::ClassMethods 
+    # include Memorable::InstanceMethods
+
+    def start 
+        puts "Welcome User."
+            API.get_brewery
+            API.brewpub
+            self.menu 
+     end 
 
         def menu
             #menu gives options to the user to move forward or exit
@@ -28,7 +30,11 @@ class CLI
                 display_micro_breweries
                 user_input_type
                 menu
-                
+            elsif user_input == "no" || user_input == "exit"
+                puts "Thank You. Hope to see you soon!"  
+            else 
+                puts "Sorry Invalid.Try Again"
+                menu
             end            
         end
         
