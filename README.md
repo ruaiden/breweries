@@ -30,8 +30,9 @@ it gives you the city and state the brewery is located along with the phone numb
 
 Clone from GitHub using this link:  git@github.com:ruaiden/breweries.git
 
-git clone git@github.com:ruaiden/breweries.git
-cd breweries
+
+```git clone git@github.com:ruaiden/breweries.git<space>cd breweries
+```
 
 ## Usage
 To begin CLI type .
