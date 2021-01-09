@@ -13,8 +13,6 @@ class CLI
 
         def menu
             #menu gives options to the user to move forward or exit
-            # prompt = TTY::Prompt.new
-            # prompt.select("Do you want to see all Breweries?", %w(yes brewpub no))
             
             prompt = TTY::Prompt.new
             choices = prompt.select("Do you want to see all Breweries?") do |menu|
@@ -22,13 +20,6 @@ class CLI
                 menu.choice 'BrewPub'
                 menu.choice 'No'
             end 
-            # puts "Enter 'yes' to see all Breweries."
-            # puts "Enter 'brewpub' to see beer-focused restaurant/bar with a brewery on-premise"
-            # puts "Enter 'no' to see Exit."
-            # sleep(2)
-            # puts "\n"
-
-            # user_input = gets.strip.downcase
             
             if choices == "Yes" 
                 puts "Good Choice!"
@@ -43,10 +34,6 @@ class CLI
 
             elsif choices == "No" 
                 puts "Thank You. Hope to see you soon!"  
-
-            else 
-                puts "Sorry Invalid.Try Again"
-                menu
             end            
         end
         
