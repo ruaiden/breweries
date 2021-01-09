@@ -31,13 +31,13 @@ it gives you the city and state the brewery is located along with the phone numb
 Clone from GitHub using this link:  git@github.com:ruaiden/breweries.git
 
 
-```git clone git@github.com:ruaiden/breweries.git```
+```git clone git@github.com:ruaiden/breweries.git```<space>
 ```cd breweries```
 
 ## Usage
 To begin CLI type .
 
-ruby bin/run.rb 
+```ruby bin/run.rb```
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
