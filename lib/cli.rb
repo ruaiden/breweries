@@ -82,7 +82,7 @@ class CLI
             sleep(1)
             puts "State: #{drink_instance.state.capitalize}"
             sleep(1)
-            puts "Phone Number: #{drink_instance.phone}"
+            puts "Phone Number: #{drink_instance.phone.insert(0, '(').insert(4, ')').insert(8, '-')}"
             sleep(1)
             puts "Website: #{drink_instance.website_url}"
             sleep(1)
@@ -114,7 +114,7 @@ class CLI
             sleep(1)
             puts "State: #{brewery_type_instance.state.capitalize}"
             sleep(1)
-            puts "Phone Number: #{brewery_type_instance.phone}"
+            puts "Phone Number: #{brewery_type_instance.phone.insert(0, '(').insert(4, ')').insert(8, '-')}"
             sleep(1)
             puts "Website: #{brewery_type_instance.website_url}"
             sleep(1)
